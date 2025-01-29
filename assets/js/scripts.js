@@ -818,7 +818,7 @@ function resetFilters() {
     }
 
     // Return to initial view
-    map.flyTo([41.0082, 28.9784], 11, {
+    map.flyTo([41.05222067354209, 28.987446198562424], 14, {
         duration: 1.5,
         easeLinearity: 0.5
     });
