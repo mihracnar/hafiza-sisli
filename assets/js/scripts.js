@@ -747,7 +747,7 @@ function applyFilters() {
 
     // If no filters are selected, return to initial view
     if (selectedThemes.size === 0 && selectedSubThemes.size === 0 && selectedDistricts.size === 0) {
-        map.flyTo([41.0082, 28.9784], 11, {
+        map.flyTo([41.05222067354209, 28.987446198562424], 14, {
             duration: 1.5,
             easeLinearity: 0.5
         });
@@ -778,7 +778,7 @@ function applyFilters() {
             });
         } else {
             // If no valid coordinates found, return to initial view
-            map.flyTo([41.0082, 28.9784], 11, {
+            map.flyTo([41.05222067354209, 28.987446198562424], 14, {
                 duration: 1.5,
                 easeLinearity: 0.5
             });
