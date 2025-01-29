@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <!-- Güçlendirilmiş Parlama Efekti -->
+    <filter id="powerfulGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#ffffff" flood-opacity="0.7" result="glowColor"/>
+      <feComposite in="glowColor" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Geliştirilmiş Gölge -->
+    <filter id="strongShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="3" dy="3" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadowBlur"/>
+      <feMerge>
+        <feMergeNode in="shadowBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ana Logo Grubu - Merkeze Konumlandırıldı -->
+  <g transform="translate(50, 20)">
+    <!-- Büyütülmüş Geometrik Sembol -->
+    <g transform="translate(125, 0)" filter="url(#powerfulGlow)">
+      <!-- Dış Buffer -->
+      <rect x="0" y="0" width="50" height="50" 
+            fill="none" 
+            stroke="#EEEEEE" 
+            stroke-width="8" 
+            transform="rotate(45, 25, 25)"/>
+      <!-- Ana Çizgi -->
+      <rect x="0" y="0" width="50" height="50" 
+            fill="none" 
+            stroke="#0D0D0D" 
+            stroke-width="4" 
+            transform="rotate(45, 25, 25)"/>
+      
+      <!-- Dış Buffer (Dash Çizgi) -->
+      <rect x="12" y="12" width="50" height="50" 
+            fill="none" 
+            stroke="#EEEEEE" 
+            stroke-width="8" 
+            transform="rotate(45, 37, 37)"
+            stroke-dasharray="4,4"/>
+      <!-- Dash Çizgi -->
+      <rect x="12" y="12" width="50" height="50" 
+            fill="none" 
+            stroke="#0D0D0D" 
+            stroke-width="4" 
+            transform="rotate(45, 37, 37)"
+            stroke-dasharray="4,4"/>
+    </g>
+    
+    <!-- Büyütülmüş ve Kalınlaştırılmış Logo Yazısı -->
+    <g filter="url(#strongShadow)">
+      <!-- Tampon Beyaz Çizgi -->
+      <text x="150" y="130" 
+            text-anchor="middle" 
+            font-family="'Open Sans', sans-serif" 
+            font-size="50.5" 
+            letter-spacing="2"
+            font-weight="900" 
+            stroke="#EEEEEE" 
+            stroke-width="6" 
+            fill="none">HAFIZA</text>
+      <!-- Ana Yazı -->
+      <text x="150" y="130" 
+            text-anchor="middle" 
+            font-family="'Open Sans', sans-serif" 
+            font-size="50.5" 
+            letter-spacing="2"
+            font-weight="900" 
+            fill="#0D0D0D">HAFIZA</text>
+      
+      <!-- Tampon Beyaz Çizgi -->
+      <text x="150" y="170" 
+            text-anchor="middle" 
+            font-family="'Open Sans', sans-serif" 
+            font-size="32" 
+            letter-spacing="6"
+            font-weight="700" 
+            stroke="#EEEEEE" 
+            stroke-width="6" 
+            fill="none">İSTANBUL</text>
+      <!-- Ana Yazı -->
+      <text x="150" y="170" 
+            text-anchor="middle" 
+            font-family="'Open Sans', sans-serif" 
+            font-size="32" 
+            letter-spacing="6"
+            font-weight="700" 
+            fill="#0D0D0D">İSTANBUL</text>
+    </g>
+  </g>
+</svg>
